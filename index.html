@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noite do Hambúrguer 🍔 | Family Burguer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="orderScreen">
+    <header>
+      <h1>🍔 Noite do Hambúrguer</h1>
+      <p>Monte seu pedido e envie direto no WhatsApp</p>
+    </header>
+
+    <div class="container">
+      <section class="card">
+        <h2>👤 Seu nome</h2>
+        <input type="text" id="nome" placeholder="Ex: Maria, João..." />
+        <h2 class="campo-abaixo">📱 Seu número (WhatsApp)</h2>
+        <input type="tel" id="telefone" placeholder="Ex: (13) 99999-9999" />
+        <p class="hint">Para receber a resposta quando seu pedido estiver pronto.</p>
+      </section>
+
+      <section class="card">
+        <h2>🍔 Monte seu hambúrguer</h2>
+        <p class="hint">Marque os ingredientes que vão no lanche.</p>
+        <div class="options-inline">
+          <label><input type="checkbox" name="ingredientes" value="Pão"> 🥖 Pão</label>
+          <label><input type="checkbox" name="ingredientes" value="Carne"> 🥩 Carne</label>
+          <label><input type="checkbox" name="ingredientes" value="Salada"> 🥬 Salada</label>
+          <label><input type="checkbox" name="ingredientes" value="Queijo"> 🧀 Queijo</label>
+          <label><input type="checkbox" name="ingredientes" value="Tomate"> 🍅 Tomate</label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>➕ Extras (opcional)</h2>
+        <div class="options-inline">
+          <label><input type="checkbox" name="extras" value="Ketchup"> Ketchup</label>
+          <label><input type="checkbox" name="extras" value="Mostarda"> Mostarda</label>
+          <label><input type="checkbox" name="extras" value="Molho especial"> Molho especial</label>
+          <label><input type="checkbox" name="extras" value="Maionese"> Maionese</label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>🥤 Bebida</h2>
+        <div class="options-inline">
+          <label><input type="radio" name="bebida" value="Refrigerante"> Refrigerante</label>
+          <label><input type="radio" name="bebida" value="Suco natural"> Suco natural</label>
+          <label><input type="radio" name="bebida" value="Água"> Água</label>
+          <label><input type="radio" name="bebida" value="Cerveja"> Cerveja</label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>📝 Observações</h2>
+        <input type="text" id="obs" placeholder="Ex: sem cebola, ponto da carne bem passado..." />
+      </section>
+
+      <button type="button" class="btn-order" onclick="montarPedido()">Montar pedido e enviar no WhatsApp</button>
+    </div>
+  </div>
+
+  <div id="successScreen" class="success">
+    <div class="success-box">
+      <h1>✅ Pedido montado!</h1>
+      <div id="resumoPedido" class="resumo-pedido"></div>
+      <p class="success-hint">Clique no botão para abrir o WhatsApp com a mensagem pronta. É só enviar!</p>
+      <a id="btnWhatsApp" href="#" target="_blank" rel="noopener" class="btn-whatsapp">
+        <span class="whatsapp-icon">💬</span> Enviar pedido no WhatsApp
+      </a>
+      <button type="button" class="btn-voltar" onclick="voltarPedido()">Fazer outro pedido</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #2d1810 0%, #5c3d2e 50%, #3d2318 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #c41e1e 0%, #8b0000 100%);
+  color: white;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.75rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
+.container {
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #5c3d2e;
+}
+
+.card h2.campo-abaixo {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #e0d5c8;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #c41e1e;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px;
+  border: 2px solid #e8e0d5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-card:hover {
+  border-color: #c41e1e;
+  background: #fff8f5;
+}
+
+.option-card input {
+  margin: 0 0 8px 0;
+  accent-color: #c41e1e;
+}
+
+.option-card input:checked + .option-label {
+  font-weight: bold;
+  color: #8b0000;
+}
+
+.option-card:has(input:checked) {
+  border-color: #c41e1e;
+  background: #fff0ed;
+}
+
+.option-label {
+  display: block;
+  font-size: 1rem;
+}
+
+.option-desc {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.options-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.options-inline label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.options-inline input[type="checkbox"],
+.options-inline input[type="radio"] {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  accent-color: #c41e1e;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+.card-whatsapp {
+  border: 2px dashed #25d366;
+  background: #f0fff4;
+}
+
+.card-whatsapp h2 {
+  color: #128c7e;
+}
+
+.btn-order {
+  width: 100%;
+  padding: 18px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #c41e1e 0%, #8b0000 100%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(139, 0, 0, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-order:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 0, 0, 0.5);
+}
+
+.btn-order:active {
+  transform: translateY(0);
+}
+
+/* Success screen */
+.success {
+  display: none;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2d1810 0%, #5c3d2e 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+.success-box {
+  background: white;
+  color: #333;
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.success-box h1 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  color: #2d1810;
+}
+
+.resumo-pedido {
+  text-align: left;
+  background: #f8f4f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.success-hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #25d366;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+.whatsapp-icon {
+  font-size: 1.3rem;
+}
+
+.btn-voltar {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #c41e1e;
+  border-radius: 12px;
+  background: transparent;
+  color: #c41e1e;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-voltar:hover {
+  background: #c41e1e;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
